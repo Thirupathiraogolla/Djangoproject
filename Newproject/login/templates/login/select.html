@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'login/select.css' %}">
+</head>
+<body class="flex">
+    <div>
+        <table border="1px solid black" cellspacing="0px" >
+            <thead style="background-color: rgb(114, 114, 211);color: white;">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Emali</th>
+                    <th>contact</th>
+                    <th>Password</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+            
+                {% for re in register %}
+                    <tr>
+                        <td>{{re.id}}</td>
+                        <td>{{re.name}}</td>
+                        <td>{{re.email}}</td>
+                        <td>{{re.phone}}</td>
+                        <td>{{re.password}}</td>
+                    </tr>
+                    
+                {% endfor %}
+                
+
+            </tbody>
+        </table>
+    </div>
+    
+    
+</body>
+</html>
